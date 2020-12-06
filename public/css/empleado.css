@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'space_questregular';
+    src: url('./Fuentes/space_quest-webfont.woff2') format('woff2'),
+            url('./Fuentes/space_quest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'road_rageregular';
+    src: url('./Fuentes/road_rage.woff2') format('woff2'),
+            url('./Fuentes/road_rage.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'streamsterregular';
+    src: url('./Fuentes/streamster-webfont.woff2') format('woff2'),
+            url('./Fuentes/streamster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'commandocommando';
+    src: url('./Fuentes/commando-webfont.woff2') format('woff2'),
+         url('./Fuentes/commando-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-image: url('Empleado.jfif');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    text-align: center;
+}
+
+#app{
+    margin-top: 100px;
+}
+
+#Titulo{
+    background: rgba(71, 0, 65, 0.3);
+    border-radius: 15px;
+    font-family: 'commandocommando';
+    font-size: 4rem;
+    color: #ff5257;
+}
+
+.form-row .form-group label{
+    color: #81b0c0;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+.Tarjetas{
+    background: #261d28d8;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*#btn_Modificar{
+    margin-top: 33px;
+    background-color: #ff5257;
+    border-color: #ff5257;
+    color: #37266d;
+    font-family: 'space_questregular';
+}*/
+
+button{
+    background: transparent;
+    border: none
+  }
+  
+  .Login button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ff5257;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .Login button:hover {
+    background: #ff5257;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff5257,
+                0 0 25px #ff5257,
+                0 0 50px #ff5257,
+                0 0 100px #ff5257;
+  }
+  
+  .Login button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .Login button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff5257);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .Login button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff5257);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .Login button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff5257);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .Login button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff5257);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+/* Tamaño tablet */
+@media (max-width: 992px) {
+    #Titulo{
+        font-size: 3.2rem;
+    }
+}
+
+/* Tamaño celular */
+@media (max-width: 768px) {
+    #Titulo{
+        font-size: 2.5rem;
+    }
+}

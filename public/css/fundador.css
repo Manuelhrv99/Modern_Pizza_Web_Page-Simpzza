@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'space_questregular';
+    src: url('./Fuentes/space_quest-webfont.woff2') format('woff2'),
+         url('./Fuentes/space_quest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'road_rageregular';
+    src: url('./Fuentes/road_rage.woff2') format('woff2'),
+            url('./Fuentes/road_rage.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'streamsterregular';
+    src: url('./Fuentes/streamster-webfont.woff2') format('woff2'),
+            url('./Fuentes/streamster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom right, #dae31e, #f96844, #f820c9);
+    background-repeat: no-repeat;
+}
+
+.Sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sec .Content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+h1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'streamsterregular';
+    color: #fff;
+}
+
+#Titulo{
+    font-size: 5rem;
+    color: #000;
+}
+
+img{
+    height: 500px;
+}
+
+#Carrusel{
+    height: 500px;
+    width: 350px;
+}
+
+/* Tamaño tablet */
+@media (max-width: 992px) {
+    h1{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+  
+/* Tamaño celular */
+@media (max-width: 768px) {
+    img{
+        height: 400px;
+    }
+    
+    #Carrusel{
+        margin-left: 18%;
+        height: 400px;
+        width: 300px;
+    }
+}

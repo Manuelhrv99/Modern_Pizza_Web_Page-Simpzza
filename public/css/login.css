@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'commandocommando';
+  src: url('./Fuentes/commando-webfont.woff2') format('woff2'),
+        url('./Fuentes/commando-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'space_questitalic';
+  src: url('./Fuentes/space_quest_italic-webfont.woff2') format('woff2'),
+        url('./Fuentes/space_quest_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'space_questregular';
+  src: url('./Fuentes/space_quest-webfont.woff2') format('woff2'),
+        url('./Fuentes/space_quest-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    height: 100%;
+  }
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+
+  background-image: url("Login.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#img_Logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+img{
+  max-width: 160px;
+}
+
+.Login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.7);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.Login h2 {
+  color: #fff;
+  text-align: center;
+  font-family: 'space_questregular';
+  margin-bottom: 0;
+}
+
+.Login .User_Input {
+  position: relative;
+}
+
+.Login .User_Input input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.Login .User_Input label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.Login .User_Input input:focus ~ label,
+.Login .User_Input input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f02be4;
+  font-size: 12px;
+}
+
+button{
+  background: transparent;
+  border: none
+}
+
+.Login button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #f02be4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.Login button:hover {
+  background: #f02be4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f02be4,
+              0 0 25px #f02be4,
+              0 0 50px #f02be4,
+              0 0 100px #f02be4;
+}
+
+.Login button span {
+  position: absolute;
+  display: block;
+}
+
+.Login button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f02be4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.Login button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #f02be4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.Login button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #f02be4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.Login button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #f02be4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+#Mensaje{
+  margin-top: 40px;
+  text-align: center;
+  color: #cd0a0a;
+  font-family: 'space_questregular'
+}
+
+#btn_Registro{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn_Registro a{
+  color: white;
+}
+
+#btn_Registro a:hover{
+  color:  #f02be4;
+}

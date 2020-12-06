@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'space_questregular';
+  src: url('./Fuentes/space_quest-webfont.woff2') format('woff2'),
+       url('./Fuentes/space_quest-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'road_rageregular';
+  src: url('./Fuentes/road_rage.woff2') format('woff2'),
+       url('./Fuentes/road_rage.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+*{box-sizing:border-box;}
+
+
+
+body{
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+img{
+  max-width:100%;
+}
+.cf:before,.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+.Contenedor{
+  width: 75%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.Titulo{
+  font-family: 'road_rageregular';
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em 0;
+  border-bottom: 1px solid #dadada;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  span{
+    font-family: 'road_rageregular';
+    font-weight: normal;
+    font-style: italic;
+     text-transform: lowercase;
+    color: #777;
+    
+  }
+}
+
+// HEADER
+
+.Header{
+  padding: 1em 0;
+  border-bottom: 1px solid #D0D0D0;
+ 
+  a.Continuar{
+    &:link , &:visited{
+      text-decoration: none;
+      font-family: 'space_questregular';
+      letter-spacing: -.015em;
+      font-size: .75em;
+      padding: 1em;
+      color: #fff;
+      background: #b60398;
+      font-weight: bold;
+      border-radius: 50px;
+      float: right;
+      text-align: right;
+       @include transition(all, .25s, linear);
+    }
+    &:after{
+      content: "\276f";
+      padding: .5em;
+      position: relative;
+      right:0;
+       @include transition(all, .15s, linear);
+      
+    }
+    &:hover , &:focus, &:active{
+      background: #f69679;
+      
+      &:after{
+        right: -10px;
+      }
+    }
+  }
+}
+
+// CARRITO
+
+.Carrito{
+  padding: 1em 0 ;
+ 
+  .Articulo{
+    display: block;
+    width: 100%;
+    padding: 1.5em;
+   
+    border-bottom: 1px solid #fafafa;
+    &.Par{
+      background: #fafafa;
+    }
+    .Info{
+      display: table;
+      width: 100%;
+    }
+    .Seccion{
+      display: table-cell;
+      vertical-align: middle;
+      
+      h3{
+        font-size: 1em;
+        font-family: 'road_rageregular';
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .025em; 
+      }
+      p{
+        display: inline-block;
+        font-size: .85em;
+        color: #777777;
+        font-family: 'space_questregular';
+            .quantity {
+              font-weight: bold;
+              color: #333;
+      } 
+        &.stockStatus{
+          color: #82CA9C;
+          font-weight: bold;
+          padding: .5em 0 0 1em;
+          text-transform: uppercase;
+          &.out {
+            color: #F69679;
+          }
+        }
+        
+      }
+      .Imagen{
+        width: 4em;
+       
+        float: left;
+      }
+      &.SubTotal{
+        text-align: center;
+        p {
+          font-size: 1.25em;
+        } 
+      }
+      
+    input.Cantidad{
+        width: 2em;
+        text-align: center;
+        font-size: 1em;
+        padding: .25em;
+        margin: 1em .5em 0 0; 
+      }
+      .Imagen {
+        width: 8em;
+        display: inline;
+        padding-right: 1em;
+      }
+    }
+  }
+}   
+
+a.Eliminar{
+  text-decoration: none;
+  font-family: 'road_rageregular';
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: .5em;
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: .85;
+   @include transition(all, .25s, linear);
+  &:hover {
+    background: #f30;
+  }
+}
+
+.Boton{
+     &:link , &:visited {
+      text-decoration: none;
+      font-family: 'space_questregular';
+      letter-spacing: -.015em;
+      font-size: 1em;
+      padding: 1em 3em;
+      color: #fff;
+      background: #b60398;
+      font-weight: bold;
+      border-radius: 50px;
+      float: right;
+      text-align: right;
+       @include transition(all, .25s, linear);
+    }
+      &:after{
+      content: "\276f";
+      padding: .5em;
+      position: relative;
+      right:0;
+       @include transition(all, .15s, linear);
+      
+    }
+    &:hover , &:focus, &:active{
+      background: #f69679;
+        &:after {
+        right: -10px;
+      }
+    }
+}
+
+/* TOTAL */
+
+.Cuenta{
+float: right;
+width: 35%;
+  .Total{
+    padding: .5em;
+    text-align: right;
+  
+    &.Final{
+      font-size: 1.25em;
+    }
+    span{
+      display: inline-block;
+      text-align: right;
+     
+    }
+    .Label{
+      font-family: 'road_rageregular';
+      font-size: .85em;
+      text-transform: uppercase;
+      color: #777;
+    }
+    .Precio{
+      font-family: 'space_questregular';
+      letter-spacing: -.025em;
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width:992px){
+
+  .Contenedor {
+    width: 98%;
+    padding: 2% 0;
+  }
+  .Titulo{
+    font-size: 1.5em;
+    padding: 10% 5%;
+  }
+  .Header{
+    padding: 1em;
+    font-size: 90%;
+  }
+  .Carrito{
+    .Articulo{
+      .Seccion{
+          width: 90%;
+          display: block;float: left;
+        &.SubTotal , &.btn_Eliminar{ 
+          display: none;
+        }
+        .Imagen{
+          width: 25%;
+        }
+      }
+    }
+  }
+  .Cuenta{
+    width: 100%;
+    .Total{
+      text-align: center;
+    }
+  }
+
+  a.Boton.Pagar{
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+  }
+}

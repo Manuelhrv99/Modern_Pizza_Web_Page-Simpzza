@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'space_questregular';
+    src: url('./Fuentes/space_quest-webfont.woff2') format('woff2'),
+            url('./Fuentes/space_quest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'road_rageregular';
+    src: url('./Fuentes/road_rage.woff2') format('woff2'),
+            url('./Fuentes/road_rage.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'streamsterregular';
+    src: url('./Fuentes/streamster-webfont.woff2') format('woff2'),
+            url('./Fuentes/streamster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'commandocommando';
+    src: url('./Fuentes/commando-webfont.woff2') format('woff2'),
+         url('./Fuentes/commando-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+body{
+    background-image: url('Admin.jpg');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Login img{
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 50px;
+}
+
+.Logout{
+    display: flex;
+}
+
+.Centrar{
+    margin-top: 25px;
+}
+
+#Usuario{
+    margin-left: 10px;
+    font-family: 'road_rageregular';
+    color: #fff;
+}
+
+.container{
+    text-align: center;
+}
+
+h1{
+    background: linear-gradient(to left, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00);
+    margin-top: 40px;
+    -webkit-text-stroke: 2px rgb(84, 74, 230);
+    font-family: 'space_questregular';
+    font-size: 4rem;
+    color: #ebfffb;
+}
+
+.form-row .form-group label{
+    color: #ebfffb;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+.Tarjetas{
+    background: #250b4ac5;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Pizzas{
+    background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
+    -webkit-text-stroke: 2px rgb(84, 74, 230);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2.5rem;
+}
+
+#Agregar{
+    background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
+    -webkit-text-stroke: 2px rgb(84, 74, 230);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2.5rem;
+}
+
+#Empleados{
+    background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
+    -webkit-text-stroke: 2px rgb(84, 74, 230);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2.5rem;
+}
+
+button{
+    background: transparent;
+}
+
+/* Primer boton */
+  
+.Mod button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #b53ba8;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 1px solid #b53ba8;
+    border-radius: 5px;
+}
+  
+.Mod button:hover {
+    background: #b53ba8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #b53ba8,
+                0 0 25px #b53ba8,
+                0 0 50px #b53ba8,
+                0 0 100px #b53ba8;
+}
+
+/* Segundo boton */
+
+.Eli button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #72a9d1;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 1px solid #72a9d1;
+    border-radius: 5px;
+}
+  
+.Eli button:hover {
+    background: #72a9d1;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #72a9d1,
+                0 0 25px #72a9d1,
+                0 0 50px #72a9d1,
+                0 0 100px #72a9d1;
+}
+
+/* Tamaño tablet */
+@media (max-width: 992px) {
+    #Titulo{
+        font-size: 3.2rem;
+    }
+}
+
+/* Tamaño celular */
+@media (max-width: 768px) {
+    #Titulo{
+        font-size: 2.2rem;
+    }
+}
