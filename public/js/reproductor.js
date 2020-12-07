@@ -20,7 +20,7 @@ $(function()
         albums = ['Turbulence','Me & You','Electro Boy','Home','Proxy (Original Mix)'], 
         trackNames = ['Miaimi Nights - Ocean Drive','Alex Skrindo - Me & You','Kaaze - Electro Boy','Jordan Schor - Home','Martin Garrix - Proxy'], 
         albumArtworks = ['_1','_2','_3','_4','_5'], 
-        trackUrl = ['./Canciones/Miami Nights 1984  - Ocean Drive.mp3',
+        trackUrl = ['https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/FISHER%20-%20Losing%20It.mp3',
         'https://open.spotify.com/track/0b6wdul3A5sQNpIOv03OxP?si=E8PjC5PqSbm1E0zZH_lM3Q',
         'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3',
         'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3',
