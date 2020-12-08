@@ -20,7 +20,7 @@ $(function()
         albums = ['Turbulence','The Pump Panel','UwU','Dangerous Days','Losing It'], 
         trackNames = ['Miami Nights 1984 - Ocean Drive','New Order - Confusion Dub','Halogen - U Got That','Perturbator - Future Club','Fisher - Losing It'], 
         albumArtworks = ['_1','_2','_3','_4','_5'], 
-        trackUrl = ['https://github.com/Manuelhrv99/Simpzza/blob/main/public/Canciones/Miami%20Nights%201984%20-%20Ocean%20Drive%20Mod.mp3',
+        trackUrl = ['https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Miami_Nights_1984%20-%20Ocean_Drive.mp3',
         'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/New%20Order%20-%20Confusion%20dub.mp3',
         'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Halogen%20-%20U%20Got%20That.mp3',
         'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Perturbator%20-%20Future%20Club.mp3',
