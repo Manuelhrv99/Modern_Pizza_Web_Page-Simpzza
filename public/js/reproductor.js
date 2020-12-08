@@ -17,14 +17,14 @@ $(function()
         nTime = 0, 
         buffInterval = null, 
         tFlag = false, 
-        albums = ['Turbulence','Me & You','Electro Boy','Home','Proxy (Original Mix)'], 
-        trackNames = ['Miami Nights - Ocean Drive','Alex Skrindo - Me & You','Kaaze - Electro Boy','Jordan Schor - Home','Martin Garrix - Proxy'], 
+        albums = ['Turbulence','The Pump Panel','UwU','Dangerous Days','Losing It'], 
+        trackNames = ['Miami Nights 1984 - Ocean Drive','New Order - Confusion Dub','Halogen - U Got That','Perturbator - Future Club','Fisher - Losing It'], 
         albumArtworks = ['_1','_2','_3','_4','_5'], 
-        trackUrl = ['https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/FISHER%20-%20Losing%20It.mp3',
-        'https://open.spotify.com/track/0b6wdul3A5sQNpIOv03OxP?si=E8PjC5PqSbm1E0zZH_lM3Q',
-        'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3',
-        'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3',
-        'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3'], 
+        trackUrl = ['https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Miami%20Nights%201984%20-%20Ocean%20Drive.mp3',
+        'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/New%20Order%20-%20Confusion%20dub.mp3',
+        'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Halogen%20-%20U%20Got%20That.mp3',
+        'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/Perturbator%20-%20Future%20Club.mp3',
+        'https://raw.githubusercontent.com/Manuelhrv99/Simpzza/main/public/Canciones/FISHER%20-%20Losing%20It.mp3'], 
         playPreviousTrackButton = $('#play-previous'), 
         playNextTrackButton = $('#play-next'), 
         currIndex = -1;
@@ -41,7 +41,7 @@ $(function()
                 i.attr('class','fas fa-pause');
                 audio.play();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Pausa R.png"
+                img_Play_Pausa.src = "./Iconos/Pausa M.png"
             }
             else
             {
@@ -52,7 +52,7 @@ $(function()
                 i.attr('class','fas fa-play');
                 audio.pause();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Play R.png"
+                img_Play_Pausa.src = "./Iconos/Play M.png"
             }
         },300);
     }
@@ -158,6 +158,7 @@ $(function()
             tProgress.text('00:00');
             albumArt.removeClass('buffering').removeClass('active');
             clearInterval(buffInterval);
+            selectTrack(1)
 		}
     }
     
@@ -251,9 +252,15 @@ $(function()
         sArea.on('click',playFromClickedPos);
 		
         $(audio).on('timeupdate',updateCurrTime);
+        
+        playNextTrackButton.on('click',function(){ 
+                selectTrack(1);
+        });
 
-        playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
-        playNextTrackButton.on('click',function(){ selectTrack(1);});
+        playPreviousTrackButton.on('click',function(){ 
+            selectTrack(-1);
+        });
+        
 	}
     
 	initPlayer();
@@ -268,16 +275,16 @@ var OverA = () => {
 }
 var No_OverA = () => {
     var img_Anterior = document.getElementById("img_Anterior")
-    img_Anterior.src = "./Iconos/Anterior R.png"
+    img_Anterior.src = "./Iconos/Anterior M.png"
 }
 //Play y pausa
 var OverPP = () => {
     var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play R.png")
+    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play M.png")
     {
         img_Play_Pausa.src = "./Iconos/Play B.png"
     }
-    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa R.png")
+    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa M.png")
     {
         img_Play_Pausa.src = "./Iconos/Pausa B.png"
     }
@@ -285,11 +292,11 @@ var OverPP = () => {
 var No_OverPP = () => {
     if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play B.png")
     {
-        img_Play_Pausa.src = "./Iconos/Play R.png"
+        img_Play_Pausa.src = "./Iconos/Play M.png"
     }
     else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa B.png")
     {
-        img_Play_Pausa.src = "./Iconos/Pausa R.png"
+        img_Play_Pausa.src = "./Iconos/Pausa M.png"
     }
 }
 //Siguiente
@@ -299,5 +306,5 @@ var OverS = () => {
 }
 var No_OverS = () => {
     var img_Siguiente = document.getElementById("img_Siguiente")
-    img_Siguiente.src = "./Iconos/Siguiente R.png"
+    img_Siguiente.src = "./Iconos/Siguiente M.png"
 }
