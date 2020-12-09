@@ -239,15 +239,6 @@ a.Eliminar:hover {
 }
 
 /* TOTAL */
-.Cuenta {
-  float: right;
-  width: 35%;
-}
-
-.Cuenta .Total {
-  padding: .5em;
-  text-align: right;
-}
 
 .Cuenta .Total.Final {
   font-size: 1.25em;

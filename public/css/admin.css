@@ -27,15 +27,47 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'hermesregular';
+    src: url('./Fuentes/hermes-regular-webfont.woff2') format('woff2'),
+         url('./Fuentes/hermes-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'perfect_dark_brkregular';
+    src: url('./Fuentes/pdark-webfont.woff2') format('woff2'),
+            url('./Fuentes/pdark-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'voyager_grotesque_boldbold';
+    src: url('./Fuentes/v-gerbbold-webfont.woff2') format('woff2'),
+            url('./Fuentes/v-gerbbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 
 body{
-    background-image: url('Admin.jpg');
+    background-image: url('../img/Admin\ wallpaper.png');
 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.Logout{
+    position: fixed;
+}
+
+#img_Admin{
+    width: 400px;
 }
 
 #Login img{
@@ -78,7 +110,7 @@ h1{
 }
 
 .Tarjetas{
-    background: #250b4ac5;
+    background: #250b4aea;
     border-radius: 15px;
     margin-left: 15px;
     margin-right: 15px;
@@ -93,22 +125,22 @@ h1{
 #Pizzas{
     background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
     -webkit-text-stroke: 2px rgb(84, 74, 230);
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'hermesregular';
+    font-size: 3rem;
 }
 
 #Agregar{
     background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
     -webkit-text-stroke: 2px rgb(84, 74, 230);
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'hermesregular';
+    font-size: 3rem;
 }
 
 #Empleados{
     background: linear-gradient(to left, #ffffff00, #ffffff00, #ffffff00, #250b4a, #fcfcfc00, #ffffff00, #ffffff00);
     -webkit-text-stroke: 2px rgb(84, 74, 230);
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'hermesregular';
+    font-size: 3rem;
 }
 
 button{

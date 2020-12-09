@@ -142,7 +142,8 @@
 {
     position: relative;
     height: 100%;
-    background: linear-gradient(to bottom, #2a416a, #19283f);
+    background: rgb(33, 2, 59);
+    background: linear-gradient(to bottom, #1d2e47, rgb(33, 2, 59), rgb(18, 1, 32));
     border-radius: 8px;
     z-index: 2;
 }
@@ -156,7 +157,7 @@
     margin-left: 40px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
-    box-shadow: 0 0 0 5px #dd165b;
+    box-shadow: 0 0 0 5px #ca10a3;
     border-radius: 50%;
     overflow: hidden;
 }

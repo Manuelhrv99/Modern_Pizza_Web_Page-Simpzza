@@ -41,7 +41,7 @@ $(function()
                 i.attr('class','fas fa-pause');
                 audio.play();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Pausa R.png"
+                img_Play_Pausa.src = "./Iconos/Pausa_Normal.png"
             }
             else
             {
@@ -52,7 +52,7 @@ $(function()
                 i.attr('class','fas fa-play');
                 audio.pause();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Play R.png"
+                img_Play_Pausa.src = "./Iconos/Play_Normal.png"
             }
         },300);
     }
@@ -256,13 +256,13 @@ $(function()
         playNextTrackButton.on('click',function(){ 
                 selectTrack(1);
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Pausa R.png"
+                img_Play_Pausa.src = "./Iconos/Pausa_Normal.png"
         });
 
         playPreviousTrackButton.on('click',function(){ 
             selectTrack(-1);
             var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-            img_Play_Pausa.src = "./Iconos/Pausa R.png"
+            img_Play_Pausa.src = "./Iconos/Pausa_Normal.png"
         });
         
 	}
@@ -279,16 +279,16 @@ var OverA = () => {
 }
 var No_OverA = () => {
     var img_Anterior = document.getElementById("img_Anterior")
-    img_Anterior.src = "./Iconos/Anterior R.png"
+    img_Anterior.src = "./Iconos/Anterior_Normal.png"
 }
 //Play y pausa
 var OverPP = () => {
     var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play R.png")
+    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play_Normal.png")
     {
         img_Play_Pausa.src = "./Iconos/Play M.png"
     }
-    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa R.png")
+    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa_Normal.png")
     {
         img_Play_Pausa.src = "./Iconos/Pausa M.png"
     }
@@ -296,11 +296,11 @@ var OverPP = () => {
 var No_OverPP = () => {
     if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play M.png")
     {
-        img_Play_Pausa.src = "./Iconos/Play R.png"
+        img_Play_Pausa.src = "./Iconos/Play_Normal.png"
     }
     else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa M.png")
     {
-        img_Play_Pausa.src = "./Iconos/Pausa R.png"
+        img_Play_Pausa.src = "./Iconos/Pausa_Normal.png"
     }
 }
 //Siguiente
@@ -310,5 +310,5 @@ var OverS = () => {
 }
 var No_OverS = () => {
     var img_Siguiente = document.getElementById("img_Siguiente")
-    img_Siguiente.src = "./Iconos/Siguiente R.png"
+    img_Siguiente.src = "./Iconos/Siguiente_Normal.png"
 }

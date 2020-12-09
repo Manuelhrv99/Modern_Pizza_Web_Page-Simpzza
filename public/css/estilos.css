@@ -43,9 +43,6 @@
   font-style: normal;
 }
 
-
-
-
 @font-face {
   font-family: 'perfect_dark_brkregular';
   src: url('./Fuentes/pdark-webfont.woff2') format('woff2'),
@@ -53,9 +50,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
-
 
 @font-face {
   font-family: 'voyager_grotesque_boldbold';
@@ -104,8 +98,8 @@ Header{
   vertical-align: center;
   padding: 0 50px 0 50px;
   z-index: 1000;
-  font-family: 'road_rageregular';
-  font-size: 1rem;
+  font-family: 'hermesregular';
+  font-size: 1.2rem;
 }
 Header.sticky{
   padding: 0 100px 0 100px;
@@ -144,16 +138,23 @@ Header ul li a{
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #f02be4;
+  color: #f914c9;
   letter-spacing: 2px;
   font-weight: 300;
   transition: 0.6s;
 }
+Header ul li a:hover{
+  color: #ca10a3;
+}
 
 Header.sticky .Logo,
 Header.sticky ul li a{
-  color: #f02be4;
+  color: #ca10a3;
   vertical-align: middle;
+}
+
+Header.sticky #img_Login{
+  content: url('../Iconos/Login2.png');
 }
 
 .Sec{
@@ -276,6 +277,11 @@ h2{
   color: rgb(93, 5, 116);
 }
 /* Combo box */
+
+.dropdown-item{
+  color: rgb(93, 5, 116);
+}
+
 .Tar-text .Tamaño{
   text-align:center;
   font-size:12px;
@@ -378,7 +384,7 @@ h2{
 /* Galeria */
 
 #Galeria{
-  background-image: url('../img/SILUETA.png');
+  background-image: url('../img/SILUETA2.png');
   background-position: center;
 }
 
@@ -853,8 +859,8 @@ button:focus{
 }
 
 #txt_Pagar{
-  font-family: 'road_rageregular';
-  color: #f02be4;
+  font-family: 'hermesregular';
+  color: #f914c9;
   font-size: 1.5rem;
   position:fixed;
   right:0px;
@@ -875,17 +881,17 @@ button:focus{
   margin-bottom: 10px;
   background: transparent;
   border: 0;
-  background-image: url("../Iconos/Carrito2.png");
+  background-image: url("../Iconos/Carrito1.png");
   background-repeat: no-repeat;
   transition: 0.5s;
 }
 #Icono_Carrito:hover{
   transition: 0.3s;
-  background-image: url("../Iconos/Carrito1.png");
+  background-image: url("../Iconos/Carrito2.png");
 }
 
 #Modal_Carrito .modal-body{
-  background: #3b064d;
+  background: linear-gradient(to bottom, #1d2e47, rgb(33, 2, 59), rgb(18, 1, 32));
 }
 
 #Modal_Despedida{

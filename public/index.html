@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/reproductor.css">
   <link rel="stylesheet" href="./css/carrito.css">
 
-  <link rel="shortcut icon" href="./img/Logo.png">
+  <link rel="shortcut icon" href="./img/logoiCON.png">
   
   <title>SIMPZZA</title>
 </head>
@@ -29,7 +29,7 @@
       <li><a href="#Formulario" onclick="ancla()">Suscribete</a></li>
       <li><a href="#Ubicacion" onclick="ancla()">Encuentranos</a></li>
       <li><a href="#Footer" onclick="ancla()">Sobre nosotros</a></li>
-      <a href="login.html" id="Login"><img src="./img/Login.png" alt=""></a>
+      <a href="login.html" id="Login"><img src="./Iconos/Login1.png" alt="" id="img_Login"></a>
     </ul>
     <div class="ancla" onclick="ancla()"></div>
   </header>
@@ -476,8 +476,8 @@
             <input style="color: black" type="text" class="form-control" id="in_Nombre" placeholder="Nombre">
           </div>
           <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <label for="Apellido_paterno">WhatsApp:</label>
-            <input style="color: black" type="text" class="form-control" id="in_WA" placeholder="WhatsApp">
+            <label for="Apellido_paterno">Ubicacion:</label>
+            <input style="color: black" type="text" class="form-control" id="in_Ubicacion" placeholder="WhatsApp">
           </div>
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
             <label for="Estado_civil">¿Por qué medio nos conociste?</label>
@@ -639,17 +639,17 @@
           <div id="player-controls">
               <div class="control">
                   <div class="button" id="play-previous" onmouseover="OverA()" onmouseout="No_OverA()" id="btn_Anterior">
-                    <img src="./Iconos/Anterior R.png" alt="" class="btn_Reproductor" id="img_Anterior">
+                    <img src="./Iconos/Anterior_Normal.png" alt="" class="btn_Reproductor" id="img_Anterior">
                   </div>
               </div>
               <div class="control">
                   <div class="button" id="play-pause-button" onmouseover="OverPP()" onmouseout="No_OverPP()" id="btn_Play_Pausa">
-                      <img src="./Iconos/Play R.png" alt="" class="btn_Reproductor" id="img_Play_Pausa">
+                      <img src="./Iconos/Play_Normal.png" alt="" class="btn_Reproductor" id="img_Play_Pausa">
                   </div>
               </div>
               <div class="control">
                   <div class="button" id="play-next" onmouseover="OverS()" onmouseout="No_OverS()" id="btn_Siguiente">
-                    <img src="./Iconos/Siguiente R.png" alt="" class="btn_Reproductor" id="img_Siguiente">
+                    <img src="./Iconos/Siguiente_Normal.png" alt="" class="btn_Reproductor" id="img_Siguiente">
                   </div>
               </div>
           </div>
@@ -672,7 +672,7 @@
 
           <!--Codigo del carrito-->
           <div class="C_Contenedor cf">
-            <h1 class="C_Titulo">Carrito</h1>
+            <h1 class="C_Titulo" id="txt_Carrito">Carrito</h1>
             <div class="C_Header cf">
               <a href="#" class="C_Continuar" data-dismiss="modal" aria-label="Close">Continuar comprando</a>
             </div>
@@ -684,7 +684,7 @@
                     <div class="C_Seccion">
                     <img src="./img/Waifu.jpg" alt="" class="C_Imagen"/>
                       <h3>Waifu</h3>
-                      <p><input type="text"  class="C_Cantidad" placeholder="1"/> x $80.00</p>
+                      <p><input type="text"  class="C_Cantidad" placeholder="1" disabled/> x $80.00</p>
                     </div>  
                     <div class="C_SubTotal C_Seccion">
                       <p>$80.00</p>
@@ -700,7 +700,7 @@
                       <div class="C_Seccion">
                       <img src="./img/Squad.jpg" alt="" class="C_Imagen" />
                         <h3>Squad</h3>
-                        <p> <input type="text"  class="C_Cantidad" placeholder="1"/> x $120.00</p>
+                        <p> <input type="text"  class="C_Cantidad" placeholder="1" disabled/> x $120.00</p>
                       </div>  
                       <div class="C_SubTotal C_Seccion">
                         <p>$120.00</p>
@@ -716,7 +716,7 @@
                         <div class="C_Seccion">
                         <img src="./img/Squad.jpg" alt="" class="C_Imagen" />
                           <h3>Squad</h3>
-                          <p> <input type="text"  class="C_Cantidad" placeholder="1"/> x $120.00</p>
+                          <p> <input type="text"  class="C_Cantidad" placeholder="1" disabled/> x $120.00</p>
                         </div>  
                         <div class="C_SubTotal C_Seccion">
                           <p>$120.00</p>
@@ -732,11 +732,17 @@
             
             <div class="C_Cuenta">
               <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <input style="color: black" type="text" class="form-control" id="in_Celular" placeholder="Ingresa tu celular">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="Login">
+                    <div class="User_Input">
+                      <!--No borrar name ni required-->
+                      <input type="text" name="" required="" id="in_Celular">
+                      <label>Ingresa tu celular</label>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-12 col-md-8 col-lg-8">
-                  <label class="C_Total C_Final"><span class="C_Label">Total</span><span class="C_Precio">$80.00</span></label>
+                <div class="col-sm-12 col-md-6 col-lg-8">
+                  <label class="C_Total C_Final"><span class="C_Label">Total:</span><span class="C_Precio">$80.00</span></label>
                 </div>
               </div>
                 <a href="#" class="C_Boton C_Pagar" data-toggle="modal" data-target="#Modal_Despedida" data-dismiss="modal" aria-label="Close">Pagar</a>

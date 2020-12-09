@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'commandocommando';
+    src: url('./Fuentes/commando-webfont.woff2') format('woff2'),
+         url('./Fuentes/commando-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'space_questregular';
     src: url("./Fuentes/space_quest-webfont.woff2") format("woff2"), url("./Fuentes/space_quest-webfont.woff") format("woff");
     font-weight: normal;
@@ -24,6 +32,14 @@ font-style: normal;
     font-family: 'voyager_grotesque_boldbold';
     src: url('./Fuentes/v-gerbbold-webfont.woff2') format('woff2'),
          url('./Fuentes/v-gerbbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'perfect_dark_brkregular';
+    src: url('./Fuentes/pdark-webfont.woff2') format('woff2'),
+         url('./Fuentes/pdark-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -54,15 +70,19 @@ font-weight: bold;
 text-align: center;
 font-size: 2.5rem;
 padding: 1em 0;
-border-bottom: 1px solid #dadada;
+border-bottom: 1px solid #f914c9;
 text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.747);
 letter-spacing: 3px;
 text-transform: uppercase;
 }
 
+#txt_Carrito{
+    color: #fff;
+}
+
 .C_Header {
 padding: 1em 0;
-border-bottom: 1px solid #D0D0D0;
+border-bottom: 1px solid #f914c9;
 }
 
 .C_Header a.C_Continuar {
@@ -73,7 +93,7 @@ letter-spacing: -.015em;
 font-size: .75em;
 padding: 1em;
 color: rgb(255, 255, 255);
-background: #f914c9;
+background: #ca10a3;
 border-radius: 50px;
 float: right;
 text-align: right;
@@ -91,7 +111,7 @@ transition: all 0.15s linear;
 }
 
 .C_Header a.C_Continuar:hover, .C_Header a.C_Continuar:focus, .C_Header a.C_Continuar:active {
-background: #dd165b;
+background: #f914c9;
 }
 
 .C_Header a.C_Continuar:hover:after, .C_Header a.C_Continuar:focus:after, .C_Header a.C_Continuar:active:after {
@@ -106,11 +126,11 @@ padding: 1em 0;
 display: block;
 width: 100%;
 padding: 1.5em;
-border-bottom: 1px solid #fafafa;
+border-bottom: 1px solid #f914c9;
 }
 
 .C_Carrito .C_Articulo.C_Par {
-background: #fafafa;
+    background: linear-gradient(to left, #00000000, rgb(39, 2, 70), #00000000);
 }
 
 .C_Carrito .C_Articulo .C_Info {
@@ -125,29 +145,26 @@ vertical-align: middle;
 
 .C_Carrito .C_Articulo .C_Seccion h3 {
 font-size: 1em;
-font-family: 'road_rageregular';
+font-family: 'voyager_grotesque_boldbold';
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: .025em;
 }
 
+.C_Carrito h3{
+    color: #fff;
+}
+
 .C_Carrito .C_Articulo .C_Seccion p {
 display: inline-block;
 font-size: .85em;
-color: #777777;
+color: #ca10a3;
 font-family: 'space_questregular';
 }
 
 .C_Carrito .C_Articulo .C_Seccion p .C_quantity {
 font-weight: bold;
-color: #333;
-}
-
-.C_Carrito .C_Articulo .C_Seccion p.C_stockStatus {
-color: #82CA9C;
-font-weight: bold;
-padding: .5em 0 0 1em;
-text-transform: uppercase;
+color: #ca10a3;
 }
 
 .C_Carrito .C_Articulo .C_Seccion .C_Imagen {
@@ -169,6 +186,8 @@ text-align: center;
 font-size: 1em;
 padding: .25em;
 margin: 1em .5em 0 0;
+background: transparent;
+border: none;
 }
 
 .C_Carrito .C_Articulo .C_Seccion .C_Imagen {
@@ -179,10 +198,10 @@ padding-right: 1em;
 
 a.C_Eliminar {
 text-decoration: none;
-font-family: 'road_rageregular';
+font-family: 'hermesregular';
 color: #ffffff;
 font-weight: bold;
-background: #e0e0e0;
+background: #ca10a3;
 padding: .5em;
 font-size: .75em;
 display: inline-block;
@@ -193,7 +212,7 @@ transition: all 0.25s linear;
 }
 
 a.C_Eliminar:hover {
-background: #f30;
+background: #f914c9;
 }
 
 .C_Boton:link, .C_Boton:visited {
@@ -204,7 +223,7 @@ letter-spacing: -.015em;
 font-size: 1em;
 padding: 1em 3em;
 color: #fff;
-background: #f914c9;
+background: #ca10a3;
 font-weight: bold;
 border-radius: 50px;
 float: right;
@@ -223,7 +242,7 @@ transition: all 0.15s linear;
 }
 
 .C_Boton:hover, .C_Boton:focus, .C_Boton:active {
-background: #dd165b;
+background: #f914c9;
 }
 
 .C_Boton:hover:after, .C_Boton:focus:after, .C_Boton:active:after {
@@ -235,14 +254,54 @@ right: -10px;
 
 /* Tamaño celular */
 @media (max-width: 768px) {
-    .C_Cuenta .C_Total{
+    .C_Cuenta .C_Total {
         float: center;
-        margin-right: 0px;
+        padding: .5em;
+        text-align: center;
+        margin-right: 15px;
+    }
+    .C_Cuenta .C_Total span {
+        display: inline-block;
+        text-align: center;
     }
 }
 
+.Login .User_Input {
+    position: relative;
+  }
+  
+  .Login .User_Input input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #f914c9;
+    outline: none;
+    background: transparent;
+  }
+  .Login .User_Input label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .Login .User_Input input:focus ~ label,
+  .Login .User_Input input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #f914c9;
+    font-size: 12px;
+  }
+
 .C_Cuenta .C_Total {
-    float: center;
+    float: right;
     padding: .5em;
     text-align: right;
     margin-right: 15px;
@@ -258,16 +317,19 @@ text-align: right;
 }
 
 .C_Cuenta .C_Total .C_Label {
-font-family: 'road_rageregular';
-font-size: .85em;
+font-family: 'hermesregular';
+font-size: 1em;
 text-transform: uppercase;
-color: #777;
+color: #fff;
 }
 
 .C_Cuenta .C_Total .C_Precio {
-font-family: 'space_questregular';
-letter-spacing: -.025em;
-width: 35%;
+    color: #f914c9;
+    font-family: 'hermesregular';
+    margin-left: 10px;
+    font-size: 1em;
+    letter-spacing: -.025em;
+    width: 35%;
 }
 
 @media only screen and (max-width: 992px) {
