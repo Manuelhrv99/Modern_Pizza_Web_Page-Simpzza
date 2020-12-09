@@ -81,6 +81,22 @@ img{
   outline: none;
   background: transparent;
 }
+
+.Login .User_Input {
+  position: relative;
+}
+
+.Login .User_Input input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
 .Login .User_Input label {
   position: absolute;
   top:0;
@@ -99,6 +115,7 @@ img{
   color: #f02be4;
   font-size: 12px;
 }
+
 
 button{
   background: transparent;

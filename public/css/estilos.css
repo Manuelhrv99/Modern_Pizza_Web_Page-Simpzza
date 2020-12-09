@@ -180,7 +180,7 @@ h1{
 }
 
 h2{
-  font-family: 'space_questregular';
+  font-family: 'hermesregular';
 }
 
 /* Eventos */
@@ -377,6 +377,11 @@ h2{
 
 /* Galeria */
 
+#Galeria{
+  background-image: url('../img/SILUETA.png');
+  background-position: center;
+}
+
 #Galeria h1{
   font-family: 'hermesregular';
   font-size: 3.4rem;
@@ -512,7 +517,7 @@ video {
 /* Formulario */
 
 #Formulario{
-  background: #100d39;
+  background-color: #100d39;
 }
 
 #Formulario h1{
@@ -880,7 +885,7 @@ button:focus{
 }
 
 #Modal_Carrito .modal-body{
-  background: rgb(72, 0, 75);
+  background: #3b064d;
 }
 
 #Modal_Despedida{
