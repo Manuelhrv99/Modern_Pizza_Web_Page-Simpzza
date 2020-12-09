@@ -10,13 +10,22 @@ function ancla(){
 var borrar = () =>{
     var in_Nombre = document.getElementById("in_Nombre")
     var in_WA = document.getElementById("in_WA")
-    var cb_Tamaño = document.getElementById("cb_Tamaño")
+    var cb_Medios = document.getElementById("cb_Medios")
     var indice = 0
-    //var aux_cb = document.Contenedor.cb_Tamaño.options[indice].value
-
+    //var aux_cb = document.Contenedor.cb_Medios.options[indice].value*/
+    cb_Medios.selectedIndex = 0
     in_Nombre.value = ""
     in_WA.value = ""
-    //cb_Tamaño.value = aux_cb
+    //cb_Medios.value = aux_cb
+}
+
+var enviar = () =>{
+    var in_Nombre = document.getElementById("in_Nombre")
+    var in_WA = document.getElementById("in_WA")
+    if (in_Nombre.value == "" || in_WA.value == "")
+        alert("Falta llenar algun campo")
+    else
+    alert("¡Gracias por registrarte! Muy pronto te enviaremos ofertas")
 }
 
 $(document).on("click", '[data-toggle="lightbox"]', function(event) {

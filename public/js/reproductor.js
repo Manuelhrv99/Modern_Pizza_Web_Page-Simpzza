@@ -41,7 +41,7 @@ $(function()
                 i.attr('class','fas fa-pause');
                 audio.play();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Pausa M.png"
+                img_Play_Pausa.src = "./Iconos/Pausa R.png"
             }
             else
             {
@@ -52,7 +52,7 @@ $(function()
                 i.attr('class','fas fa-play');
                 audio.pause();
                 var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-                img_Play_Pausa.src = "./Iconos/Play M.png"
+                img_Play_Pausa.src = "./Iconos/Play R.png"
             }
         },300);
     }
@@ -255,10 +255,14 @@ $(function()
         
         playNextTrackButton.on('click',function(){ 
                 selectTrack(1);
+                var img_Play_Pausa = document.getElementById("img_Play_Pausa")
+                img_Play_Pausa.src = "./Iconos/Pausa R.png"
         });
 
         playPreviousTrackButton.on('click',function(){ 
             selectTrack(-1);
+            var img_Play_Pausa = document.getElementById("img_Play_Pausa")
+            img_Play_Pausa.src = "./Iconos/Pausa R.png"
         });
         
 	}
@@ -271,40 +275,40 @@ $(function()
 //Anterior
 var OverA = () => {
     var img_Anterior = document.getElementById("img_Anterior")
-    img_Anterior.src = "./Iconos/Anterior B.png"
+    img_Anterior.src = "./Iconos/Anterior M.png"
 }
 var No_OverA = () => {
     var img_Anterior = document.getElementById("img_Anterior")
-    img_Anterior.src = "./Iconos/Anterior M.png"
+    img_Anterior.src = "./Iconos/Anterior R.png"
 }
 //Play y pausa
 var OverPP = () => {
     var img_Play_Pausa = document.getElementById("img_Play_Pausa")
-    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play M.png")
-    {
-        img_Play_Pausa.src = "./Iconos/Play B.png"
-    }
-    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa M.png")
-    {
-        img_Play_Pausa.src = "./Iconos/Pausa B.png"
-    }
-}
-var No_OverPP = () => {
-    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play B.png")
+    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play R.png")
     {
         img_Play_Pausa.src = "./Iconos/Play M.png"
     }
-    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa B.png")
+    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa R.png")
     {
         img_Play_Pausa.src = "./Iconos/Pausa M.png"
+    }
+}
+var No_OverPP = () => {
+    if(img_Play_Pausa.getAttribute("src") === "./Iconos/Play M.png")
+    {
+        img_Play_Pausa.src = "./Iconos/Play R.png"
+    }
+    else if (img_Play_Pausa.getAttribute("src") === "./Iconos/Pausa M.png")
+    {
+        img_Play_Pausa.src = "./Iconos/Pausa R.png"
     }
 }
 //Siguiente
 var OverS = () => {
     var img_Siguiente = document.getElementById("img_Siguiente")
-    img_Siguiente.src = "./Iconos/Siguiente B.png"
+    img_Siguiente.src = "./Iconos/Siguiente M.png"
 }
 var No_OverS = () => {
     var img_Siguiente = document.getElementById("img_Siguiente")
-    img_Siguiente.src = "./Iconos/Siguiente M.png"
+    img_Siguiente.src = "./Iconos/Siguiente R.png"
 }

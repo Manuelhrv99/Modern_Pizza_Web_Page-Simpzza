@@ -65,6 +65,8 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -325,7 +327,7 @@ h2{
   /*font-weight:bold;*/
   margin:15px auto;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   text-overflow: ellipsis;
   width:100%;
 }
@@ -349,34 +351,6 @@ h2{
 
 /* Combos */
 
-.contenido__video{
-  background: #7DD174;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-video { 
-   
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-
-  position: fixed;    
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
-      
-  z-index: -100;
-    
-  background-size: cover;
-
-}
-
 #Eventos2 h1{
   font-family: 'perfect_dark_brkregular';
   font-size: 3.2rem;
@@ -391,7 +365,7 @@ video {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;*/
-  background: #f02be4;
+  background: #280335;
 }
 
 #Eventos2 .Tar-Botones{
@@ -480,18 +454,33 @@ video {
 
 /* Tabla */
 
-/*#Tabla{
-  background-image: url("Combos.jpg");
-  
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
+.contenido__video{
+  background: #7DD174;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+video { 
+   
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 
-/*#glitch_tabla{
-  font-size: 1rem;
-}*/
+  position: fixed;    
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+      
+  z-index: -100;
+    
+  background-size: cover;
+
+}
 
 #Tabla h1{
   font-family: 'perfect_dark_brkregular';
@@ -523,7 +512,15 @@ video {
 /* Formulario */
 
 #Formulario{
-  background: #0c3691;
+  background: #100d39;
+}
+
+#Formulario h1{
+  font-family: 'hermesregular';
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.747);
+  margin-bottom: 80px;
 }
 
 #Formulario label{
@@ -538,16 +535,17 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 #btn_Borrar{
-  background-color: #fea23f;
-  border-color: #fea23f;
+  background-color: #7fe0f0;
+  border-color: #7fe0f0;
+  color: #100d39;
 }
 #btn_Enviar{
-  background-color: #fd45af;
-  border-color: #fd45af;
+  background-color: #590995;
+  border-color: #590995;
 }
 
 .Botones button{
@@ -577,6 +575,37 @@ video {
   height: 150px;
 }
 
+#Ubicacion h1{
+  font-family: 'perfect_dark_brkregular';
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.747);
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+#Ubicacion .txt_Ubicacion{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+}
+
+#Binario{
+  color: #f4a0ae;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* Tamaño celular */
+@media (max-width: 992px) {
+  #Ubicacion h1{
+    font-size: 2.3rem;
+  }
+}
+
 @media (max-width: 1289px) {
   #Mapa{
     position: relative;
@@ -599,9 +628,12 @@ video {
   margin-bottom: 50px;
 }
 
-.Footer h3,
+.Footer h3{
+  font-family: 'hermesregular';
+  color: #fff;
+}
 .Footer p{
-  font-family: 'space_questregular';
+  font-family: 'Nanum Gothic', sans-serif;
   color: #fff;
 }
 
@@ -789,13 +821,22 @@ h5{
   overflow-y: scroll;
 }
 
+/*#Modal_Fundador .modal-body{
+  max-width: 1200px;
+}
+
 .modal #Carrusel_Fundador img{
-  height: 500px;
+  height: 600px;
+  width: 100%;
 }
 
 #Carrusel_Fundador{
-  height: 500px;
-  width: 350px;
+  height: 600px;
+  width: 80%;
+}*/
+
+#img_Fundador{
+  width: 100%;
 }
 
 /* Boton de carrito */
