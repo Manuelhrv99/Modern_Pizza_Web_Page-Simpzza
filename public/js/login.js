@@ -1,52 +1,88 @@
-$("#Mensaje").hide().html();
+const urlBase = "http://localhost:62594/api/v1"
 
-/*
-var btn_Ingresar = () => {
-    location.href = "user_index.html"
-
-    var in_Usuario = document.getElementById("in_Usuario")
-    var in_Contraseña = document.getElementById("in_Contraseña")
-    if(in_Usuario == 'Manuel' && in_Contraseña == 1234)
-    {
-        location.href = "http://127.0.0.1:5500/Simpzza/public/index.html"
-        window.location.replace("index.html");
-    }
-    else
-    {
-        
-    }
-}*/
 
 var in_Usuario = document.getElementById("in_Usuario")
 var in_Contraseña = document.getElementById("in_Contraseña")
 
-/*var btn_Ingresar = () => {
-    if (in_Usuario == "Manuel" && in_Contraseña == "666"){
-        window.location.href = "http://localhost:3000/admin.html"
-    }else{
-        if (in_Usuario == "Mauricio" && in_Contraseña == "54321"){
-            window.location.href = "http://localhost:3000/empleado.html"
-        }else{
-            $("#Mensaje").show()
-        }
-    }
-}*/
+var btn_Ingresar = () => {
 
-document.getElementById("btn_Ingresar").addEventListener("click", Ingresar);
-
-function Ingresar(){
-    console.log("Si funciona");
-    if (in_Usuario === "Manuel" && in_Contraseña === 666){
-        window.location.href = "http://localhost:3000/admin.html"
-    }else{
-        if (in_Usuario == "Mauricio" && in_Contraseña == "54321"){
-            window.location.href = "http://localhost:3000/empleado.html"
-        }else{
-            $("#Mensaje").show()
-        }
+    var datos = {
+        Nombre : in_Usuario.value,
+        Contraseña : in_Contraseña.value
     }
+
+    if (datos.Nombre == "Manuel" && datos.Contraseña == "666"){
+        console.log(datos)
+        var url = urlBase + "/loginSU"
+    
+       fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(datos)
+        }).then((response) => {
+            return response.json()
+        }).then((data) => {
+            console.log(data)
+            if(data.login)
+            {
+                var datosSesion= {
+                    login: true,
+                    data: data.id,
+                    nombre: data.nombre 
+                }
+                localStorage.setItem("datosSesion",JSON.stringify(datosSesion))
+                window.location.href = "http://localhost:3000/admin.html"
+                alert("ingreso el super usuario")
+            }
+        }).catch((err) => {
+            console.log("ERROR EN LA API LOGIN",err)
+        })
+    }
+    else{
+        console.log(datos)
+        var url = urlBase + "/loginEmpleado"
+    
+       fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(datos)
+        }).then((response) => {
+            return response.json()
+        }).then((data) => {
+            console.log(data)
+            if(data.login)
+            {
+                var datosSesion= {
+                    login: true,
+                    data: data.id,
+                    nombre: data.nombre 
+                }
+                localStorage.setItem("datosSesion",JSON.stringify(datosSesion))
+                window.location.href = "http://localhost:3000/empleado.html"
+                alert("ingreso un usuario normal")
+            }
+        }).catch((err) => {
+            console.log("ERROR EN LA API LOGIN",err)
+        })
+    }
+
+
 }
 
 window.onload = () => {
-    console.log("Prueba")
+
+    var datosSesion = localStorage.getItem("datosSesion")
+    if (datosSesion != null)
+    {
+        datosSesion = JSON.parse(datosSesion)
+        if (datosSesion.nombre == "Manuel")
+            window.location.href = "http://localhost:3000/admin.html"
+        else
+            window.location.href = "http://localhost:3000/empleado.html"
+
+    }
 }

@@ -14,15 +14,15 @@
   <link rel="stylesheet" href="./scss/estilos2.css">
 
   <link rel="shortcut icon" href="./img/logoiCON.png">
-  
+  <script src="./js/empleado.js"></script>
   <title>Empleado</title>
 </head>
 <body>
 
-    <div class="Logout">
-        <a href="index.html" id="Login" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
+    <div class="Logout" >
+        <a href="index.html" onclick="Login()" id="Login" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
         <div class="Centrar">
-            <label for="" id="Usuario">Manuel</label>
+            <label for="" id="Usuario"></label>
         </div>
     </div>
 
@@ -43,19 +43,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar1">
                                             Modificar
                                         </button>
                                     </div>
@@ -69,19 +69,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar2" >
                                             Modificar
                                         </button>
                                     </div>
@@ -95,19 +95,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar3" >
                                             Modificar
                                         </button>
                                     </div>
@@ -121,19 +121,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar4">
                                             Modificar
                                         </button>
                                     </div>
@@ -141,8 +141,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div><!--Pizzas-->
                     
                 </div><!--Cierra el row-->
                 <!--Tarjetas de empleado-->
@@ -158,7 +156,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   
-  <script src="./js/admin.js"></script>
+
 
 </body>
 </html>

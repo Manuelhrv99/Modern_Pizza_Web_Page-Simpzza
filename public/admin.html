@@ -20,7 +20,7 @@
 <body>
 
     <div class="Logout">
-        <a href="index.html" id="Login" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
+        <a href="index.html" id="Login" onclick="Login()" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
         <div class="Centrar">
             <label for="" id="Usuario">Manuel</label>
         </div>
@@ -43,19 +43,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_1">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar" onclick="modificarCombo1()">
                                             Modificar
                                         </button>
                                     </div>
@@ -69,19 +69,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_2">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar" onclick="modificarCombo2()">
                                             Modificar
                                         </button>
                                     </div>
@@ -95,19 +95,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_3">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar" onclick="modificarCombo3()">
                                             Modificar
                                         </button>
                                     </div>
@@ -121,19 +121,19 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Pizza</label>
-                                    <input type="text" class="form-control" id="txt_P_Nombre">
+                                    <input type="text" class="form-control" id="txt_Nombre_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6 col-xl-6">
                                     <label for="">Precio</label>
-                                    <input type="text" class="form-control" id="txt_Precio">
+                                    <input type="text" class="form-control" id="txt_Precio_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <label for="">Descripción</label>
-                                    <input type="text" class="form-control" id="txt_Desc">
+                                    <input type="text" class="form-control" id="txt_Desc_4">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-xl-12">
                                     <div class="Eli">
-                                        <button id="btn_Modificar" onclick="Modificar()">
+                                        <button id="btn_Modificar" onclick="modificarCombo4()">
                                             Modificar
                                         </button>
                                     </div>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-xl-12">
                             <div class="Eli">
-                                <button id="btn_Agregar" onclick="Agregar()">
+                                <button id="btn_Agregar" onclick="adminAgregarUsuario()">
                                     Agregar
                                 </button>
                             </div>
@@ -170,81 +170,12 @@
 
                 <!--Tarjetas de empleado-->
                 <h1 id="Empleados">EMPLEADOS</h1>
-                <!--Row-->
-                <div class="row">
-
-                    <!--De aqui a...-->
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                        <div class="Tarjetas">
-                            <div class="form-row">
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Id</label>
-                                    <input type="text" class="form-control" id="txt_Id" placeholder="1" disabled>
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_E_Nombre">
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Contraseña</label>
-                                    <input type="text" class="form-control" id="txt_E_Contraseña">
-                                </div>
-                                <!--Inicio de botones-->
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <div class="Mod">
-                                        <button id="btn_Modificar" onclick="Modificar()">
-                                            Modificar
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <div class="Eli">
-                                        <button id="btn_Eliminar" onclick="Eliminar()">
-                                            Eliminar
-                                        </button>
-                                    </div>
-                                </div>
-                                <!--Terminan los botones-->
-                            </div>
-                        </div>
-                    </div>
+                
+                <div id="credencialesEmpleados" class="row">
                     <!--Aqui es lo que necesitan copiar y hacerlo iterable-->
 
                     <!--De aqui a...-->
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                        <div class="Tarjetas">
-                            <div class="form-row">
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Id</label>
-                                    <input type="text" class="form-control" id="txt_Id" placeholder="1" disabled>
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_E_Nombre">
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <label for="">Contraseña</label>
-                                    <input type="text" class="form-control" id="txt_E_Contraseña">
-                                </div>
-                                <!--Inicio de botones-->
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <div class="Mod">
-                                        <button id="btn_Modificar" onclick="Modificar()">
-                                            Modificar
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
-                                    <div class="Eli">
-                                        <button id="btn_Eliminar" onclick="Eliminar()">
-                                            Eliminar
-                                        </button>
-                                    </div>
-                                </div>
-                                <!--Terminan los botones-->
-                            </div>
-                        </div>
-                    </div>
+                   
                     <!--Aqui es lo que necesitan copiar y hacerlo iterable-->
 
                    

@@ -242,7 +242,7 @@
             <div class="col-12 col-md-6 col-lg-3">
               <div class="Producto">
                 <div class="Tar-img">
-                  <img src="./img/C_Albañil.jpg" alt="Product" class="img-responsive"/>
+                  <img src="./img/C_Totis.jpg" alt="Product" class="img-responsive"/>
                 </div>
                 <div class="Tar-text">
                   <div class="Tar-Botones">
@@ -250,16 +250,16 @@
                     <label for="">1</label>
                     <img src="./Iconos/Mas.png" alt="" id="btn_Mas" type="button" onclick="btn_Mas()">
                   </div>
-                  <a href="carrito.html">
+                  <a onclick="pedidoGetCombo1()">
                     <div class="Tamaño">
-                      <span>Albañil</span>
+                      <span id= "comboNombre_1">Maistro</span>
                     </div>
                   </a>
                   <div class="Titulo">
-                    <h3>Perfecto para levantar muros</h3>
+                    <h3 id="descCombo_1">Perfecto para levantar muros</h3>
                   </div>
                   <div class="Tar-footer">
-                    <span class="Precio">$60.00</span>
+                    <span id="precioCombo_1" class="Precio">$60</span>
                   </div>
                 </div>
               </div>
@@ -275,16 +275,16 @@
                     <label for="">1</label>
                     <img src="./Iconos/Mas.png" alt="" id="btn_Mas" type="button" onclick="btn_Mas()">
                   </div>
-                  <a href="carrito.html">
+                  <a onclick="pedidoGetCombo2()">
                     <div class="Tamaño">
-                      <span>Totis</span>
+                      <span id= "comboNombre_2">Totis</span>
                     </div>
                   </a>
                   <div class="Titulo">
-                    <h3>Ideal para compartir con la toxica</h3>
+                    <h3 id="descCombo_2">Ideal para compartir con la toxica</h3>
                   </div>
                   <div class="Tar-footer">
-                    <span class="Precio">$120.00</span>
+                    <span id="precioCombo_2" class="Precio">$120</span>
                   </div>
                 </div>
               </div>
@@ -300,16 +300,16 @@
                     <label for="">1</label>
                     <img src="./Iconos/Mas.png" alt="" id="btn_Mas" type="button" onclick="btn_Mas()">
                   </div>
-                  <a href="carrito.html">
+                  <a onclick="pedidoGetCombo3()">
                     <div class="Tamaño">
-                      <span>Tutsibota</span>
+                      <span id="comboNombre_3">Tutsibota</span>
                     </div>
                   </a>
                   <div class="Titulo">
-                    <h3>Creado para tu peda de infonavit</h3>
+                    <h3 id= "descCombo_3">Creado para tu peda de infonavit</h3>
                   </div>
                   <div class="Tar-footer">
-                    <span class="Precio">$480.00</span>
+                    <span  id="precioCombo_3" class="Precio">$800</span>
                   </div>
                 </div>
               </div>
@@ -325,16 +325,16 @@
                     <label for="">1</label>
                     <img src="./Iconos/Mas.png" alt="" id="btn_Mas" type="button" onclick="btn_Mas()">
                   </div>
-                  <a href="carrito.html">
+                  <a onclick="pedidoGetCombo4()">
                     <div class="Tamaño">
-                      <span>Rotoplas</span>
+                      <span id="comboNombre_4">Rotoplas</span>
                     </div>
                   </a>
                   <div class="Titulo">
-                    <h3>Fiesta foranea con cover de a $50</h3>
+                    <h3 id="descCombo_4">Fiesta foranea con cover de a $50</h3>
                   </div>
                   <div class="Tar-footer">
-                    <span class="Precio">$2000.00</span></div>
+                    <span id="precioCombo_4" class="Precio">$2000</span></div>
                   </div>
                 </div>
               </div>
@@ -477,7 +477,7 @@
           </div>
           <div class="form-group col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
             <label for="Apellido_paterno">Ubicacion:</label>
-            <input style="color: black" type="text" class="form-control" id="in_Ubicacion" placeholder="WhatsApp">
+            <input style="color: black" type="text" class="form-control" id="in_Ubicacion" placeholder="Ubicacion">
           </div>
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
             <label for="Estado_civil">¿Por qué medio nos conociste?</label>
@@ -677,8 +677,8 @@
               <a href="#" class="C_Continuar" data-dismiss="modal" aria-label="Close">Continuar comprando</a>
             </div>
             <div class="C_Carrito">
-              <ul>
-    
+              <ul id="carritoIterable">
+  
                 <li class="C_Articulo">
                 <div class="C_Info"> 
                     <div class="C_Seccion">
@@ -726,8 +726,9 @@
                         </div>
                       </div>
                     </li>
-           
+            
               </ul>
+   
             </div>
             
             <div class="C_Cuenta">
@@ -745,7 +746,7 @@
                   <label class="C_Total C_Final"><span class="C_Label">Total:</span><span class="C_Precio">$80.00</span></label>
                 </div>
               </div>
-                <a href="#" class="C_Boton C_Pagar" data-toggle="modal" data-target="#Modal_Despedida" data-dismiss="modal" aria-label="Close">Pagar</a>
+                <a href="#" class="C_Boton C_Pagar" onclick="enviarSms()"  data-toggle="modal" data-target="#Modal_Despedida" data-dismiss="modal" aria-label="Close">Pagar</a>
             </div>
           </div>
           <!--Codigo del carrito-->
