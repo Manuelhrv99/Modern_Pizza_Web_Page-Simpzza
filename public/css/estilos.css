@@ -67,6 +67,10 @@
   box-sizing: border-box;
 }
 
+a{
+  cursor: pointer;
+}
+
 .scroll-container {
 	height: 100vh;
 	overflow: scroll;
