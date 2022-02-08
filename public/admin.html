@@ -20,9 +20,9 @@
 <body>
 
     <div class="Logout">
-        <a href="index.html" id="Login" onclick="Login()" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
+        <a href="index.html" id="Login" onclick="" ><img src="./Iconos/Logout3.png" alt="" onmouseover="Over()" onmouseout="No_Over()" id="img_Logout"></a>
         <div class="Centrar">
-            <label for="" id="Usuario">Manuel</label>
+            <label for="" id="Usuario">Admin</label>
         </div>
     </div>
 
@@ -145,7 +145,7 @@
                 </div><!--Pizzas-->
 
                 <!--Agregar empleado-->
-                <h1 id="Agregar">AGREGAR</h1>
+                <h1 id="Agregar">AGREGAR EMPLEADO</h1>
 
                 <div class="Tarjetas">
                     <div class="form-row">
@@ -172,17 +172,41 @@
                 <h1 id="Empleados">EMPLEADOS</h1>
                 
                 <div id="credencialesEmpleados" class="row">
-                    <!--Aqui es lo que necesitan copiar y hacerlo iterable-->
-
-                    <!--De aqui a...-->
-                   
-                    <!--Aqui es lo que necesitan copiar y hacerlo iterable-->
-
-                   
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="Tarjetas">
+                            <div class="form-row">
+                                <div class="form-group col-sm-12 col-md-12 col-xl-12">
+                                    <label for="">Id</label>
+                                    <input type="text" class="form-control" id="txt_Id" placeholder="1" disabled>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xl-12">
+                                        <label for="">Nombre</label>
+                                        <input type="text" class="form-control" id="txt_E_Nombre">
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xl-12">
+                                        <label for="">Contraseña</label>
+                                        <input type="text" class="form-control" id="txt_E_Contraseña">
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xl-12">
+                                        <div class="Mod">
+                                            <button id="btn_Modificar" onclick="modificar()">
+                                                Modificar
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xl-12">
+                                        <div class="Eli">
+                                            <button id="btn_Eliminar" onclick="eliminar()">
+                                                Eliminar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     
                 </div><!--Cierra el row-->
                 <!--Tarjetas de empleado-->
-                
 
             </div><!--Cierra el contenedor de tarjetas-->
  

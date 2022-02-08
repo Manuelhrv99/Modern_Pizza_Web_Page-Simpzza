@@ -1,6 +1,3 @@
-const urlBase = "http://localhost:62594/api/v1"
-
-
 var in_Usuario = document.getElementById("in_Usuario")
 var in_Contraseña = document.getElementById("in_Contraseña")
 
@@ -11,78 +8,16 @@ var btn_Ingresar = () => {
         Contraseña : in_Contraseña.value
     }
 
-    if (datos.Nombre == "Manuel" && datos.Contraseña == "666"){
-        console.log(datos)
-        var url = urlBase + "/loginSU"
-    
-       fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type" : "application/json"
-            },
-            body: JSON.stringify(datos)
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-            console.log(data)
-            if(data.login)
-            {
-                var datosSesion= {
-                    login: true,
-                    data: data.id,
-                    nombre: data.nombre 
-                }
-                localStorage.setItem("datosSesion",JSON.stringify(datosSesion))
-                window.location.href = "http://localhost:3000/admin.html"
-                alert("ingreso el super usuario")
-            }
-        }).catch((err) => {
-            console.log("ERROR EN LA API LOGIN",err)
-        })
+    if (datos.Nombre == "Admin" && datos.Contraseña == "admin"){
+        window.location.href = "admin.html"
+        alert("Ingresaste como super usuario")
+    }
+    else if (datos.Nombre == "Emp" && datos.Contraseña == "emp"){
+        window.location.href = "empleado.html"
+        alert("Ingresaste como empleado") 
     }
     else{
-        console.log(datos)
-        var url = urlBase + "/loginEmpleado"
-    
-       fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type" : "application/json"
-            },
-            body: JSON.stringify(datos)
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-            console.log(data)
-            if(data.login)
-            {
-                var datosSesion= {
-                    login: true,
-                    data: data.id,
-                    nombre: data.nombre 
-                }
-                localStorage.setItem("datosSesion",JSON.stringify(datosSesion))
-                window.location.href = "http://localhost:3000/empleado.html"
-                alert("ingreso un usuario normal")
-            }
-        }).catch((err) => {
-            console.log("ERROR EN LA API LOGIN",err)
-        })
+        alert("Usuario o contraseña incorrecta") 
     }
 
-
-}
-
-window.onload = () => {
-
-    var datosSesion = localStorage.getItem("datosSesion")
-    if (datosSesion != null)
-    {
-        datosSesion = JSON.parse(datosSesion)
-        if (datosSesion.nombre == "Manuel")
-            window.location.href = "http://localhost:3000/admin.html"
-        else
-            window.location.href = "http://localhost:3000/empleado.html"
-
-    }
 }

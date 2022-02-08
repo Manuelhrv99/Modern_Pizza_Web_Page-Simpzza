@@ -34,7 +34,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'hermesregular';
   src: url('./Fuentes/hermes-regular-webfont.woff2') format('woff2'),
@@ -94,7 +93,7 @@ Header{
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 17vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,11 +106,8 @@ Header{
 }
 Header.sticky{
   padding: 0 100px 0 100px;
-  height: 100px;
+  height: 13.2vh;
   background-color: rgba(33, 2, 59, 0.85);
-  /*background: #fff;*/
-  /*background: linear-gradient(to bottom, rgb(231, 103, 124), rgba(0,0,0,0.6), rgba(236, 15, 236, 0.6));*/
-  /*border-bottom: 1px solid rgba(0,0,0,.1);*/
 }
 Header.sticky ul li{
   margin-top: 15px;
@@ -162,8 +158,7 @@ Header.sticky #img_Login{
 }
 
 .Sec{
-  /*background: #fff;*/
-  height: 656px;
+  height: 87vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,11 +187,6 @@ h2{
 
 #Eventos{
   background-image: url("FONDO.jpg");
-  
-  /* Full height
-  height: 100%;*/
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -248,15 +238,17 @@ h2{
   justify-content: center;
   align-items: center;
 }
-.Tar-Botones #btn_Menos{
+.Tar-Botones .btn_Menos{
   margin-right: 20px;
   margin-left: 20px;
 }
-.Tar-Botones #btn_Mas{
+.Tar-Botones .btn_Mas{
   margin-right: 20px;
   margin-left: 20px;
 }
+
 /* Combo box */
+
 .btn-secondary{
   margin-bottom: 30px;
   background: #ebfffb;
@@ -280,6 +272,7 @@ h2{
   border-color: #ebfffb;
   color: rgb(93, 5, 116);
 }
+
 /* Combo box */
 
 .dropdown-item{
@@ -312,7 +305,6 @@ h2{
   padding: 12px 30px;
   display: table-cell;
   vertical-align: middle;
-  /*border: 1px solid #313131;*/
   background:rgb(93, 5, 116);
   color:#fff;
   box-shadow: 0 5px 5px rgba(0,0,0,0.30);
@@ -334,7 +326,6 @@ h2{
 .Tar-text .Titulo h3{
   height:50px;
   font-size:20px;
-  /*font-weight:bold;*/
   margin:15px auto;
   overflow: hidden;
   white-space: normal;
@@ -369,12 +360,6 @@ h2{
 }
 
 #Eventos2{
-  /*background-image: url("Combos.jpg");
-  
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   background: #280335;
 }
 
@@ -480,21 +465,16 @@ h2{
   z-index: -1;
 }
 video { 
-   
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-
   position: fixed;    
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
-      
+  transform: translateX(-50%) translateY(-50%);   
   z-index: -100;
-    
   background-size: cover;
-
 }
 
 #Tabla h1{
@@ -523,7 +503,6 @@ video {
   background: rgba(93, 5, 116, 0.8);
 }
 
-
 /* Formulario */
 
 #Formulario{
@@ -535,15 +514,10 @@ video {
   font-size: 3rem;
   color: #fff;
   text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.747);
-  margin-bottom: 80px;
 }
 
 #Formulario label{
   color: #fff;
-}
-
-#Formulario .row{
-  background: transparent;
 }
 
 .Botones{
@@ -565,69 +539,6 @@ video {
 
 .Botones button{
   width: 170px;
-}
-
-/* Mapa */
-
-.Sec_Mapa{
-  display: flex;
-}
-
-#Mapa{
-  position: relative;
-  height: 656px;
-  width: 50%;
-}
-#Mapa iframe {
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#img_Mapa{
-  width: 30%;
-  height: 150px;
-}
-
-#Ubicacion h1{
-  font-family: 'perfect_dark_brkregular';
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.747);
-  margin-top: 80px;
-  margin-bottom: 80px;
-  text-align: left;
-}
-
-#Ubicacion .txt_Ubicacion{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: left;
-}
-
-#Binario{
-  color: #f4a0ae;
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-/* Tamaño celular */
-@media (max-width: 992px) {
-  #Ubicacion h1{
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 1289px) {
-  #Mapa{
-    position: relative;
-    height: 656px;
-    width: 50%;
-    margin-bottom: 50px;
-  }
 }
 
 .Footer{
@@ -719,10 +630,6 @@ video {
     transition: 0.5s;
   }
   
-  #Inicio{
-    margin-top: 90px;
-  }
-  
   Header.active .ancla:before{
     top: 14px;
     transform: rotate(45deg);
@@ -756,7 +663,6 @@ video {
     overflow: auto;
     visibility: hidden;
     opacity: 0;
-    /*transform: translateY(-100%);*/
   }
 
   Header.active ul{
@@ -764,7 +670,6 @@ video {
     background-color: rgba(36, 5, 51, 0.8);
     visibility: visible;
     opacity: 1;
-    /*transform: translateY(0);*/
   }
 
   Header.active ul li a{
@@ -773,7 +678,7 @@ video {
   }
 
   Header{
-    max-height: 90px;
+    max-height: 13.1vh;
   }
 
   Header .Logo img{
@@ -835,20 +740,6 @@ h5{
 .modal-open .modal{
   overflow-y: scroll;
 }
-
-/*#Modal_Fundador .modal-body{
-  max-width: 1200px;
-}
-
-.modal #Carrusel_Fundador img{
-  height: 600px;
-  width: 100%;
-}
-
-#Carrusel_Fundador{
-  height: 600px;
-  width: 80%;
-}*/
 
 #img_Fundador{
   width: 100%;
