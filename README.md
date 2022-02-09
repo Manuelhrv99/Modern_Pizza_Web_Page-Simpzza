@@ -12,4 +12,14 @@ CRUD with login validations.
 
 ## Captions
 
-![Graphic definition](https://github.com/Manuelhrv99/BMTH_Wallpaper/blob/main/BMTH%20Wallpaper.jpg?raw=true)
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex1.png?raw=true)
+
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex2.png?raw=true)
+
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex3.png?raw=true)
+
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex4.png?raw=true)
+
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex5.png?raw=true)
+
+![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex6.png?raw=true)
