@@ -10,6 +10,10 @@ Fully functional media player.
 
 CRUD with login validations.
 
+Parallax effect.
+
+Text glitch effect.
+
 ## Captions
 
 ![Graphic definition](https://github.com/Manuelhrv99/Modern_Pizza_Web_Page-Simpzza/blob/main/Ex1.png?raw=true)
