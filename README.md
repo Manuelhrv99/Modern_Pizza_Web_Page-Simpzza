@@ -1,6 +1,6 @@
 # Modern_Pizza_Web_Page-Simpzza
 
-## Pizza web page frontend.
+## Pizza web page ONLY frontend.
 
 ### Design by:
 
